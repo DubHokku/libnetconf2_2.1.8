@@ -1799,7 +1799,8 @@ nc_connect_ssh_channel(struct nc_session *session, struct ly_ctx *ctx)
     new_session->status = NC_STATUS_RUNNING;
 
     if (nc_ctx_check_and_fill(new_session) == -1) {
-        goto fail;
+        WRN(session, "/* store information for session connection */ ");
+        // goto fail;
     }
 
     /* store information into session */
