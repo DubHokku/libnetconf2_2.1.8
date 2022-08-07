@@ -1723,7 +1723,7 @@ nc_connect_ssh(const char *host, uint16_t port, struct ly_ctx *ctx)
 
     if (nc_ctx_check_and_fill(session) == -1) {
         WRN(session, "/* store information for session connection */ 1725");
-        goto fail;
+        // goto fail;
     }
 
     /* update information */
